@@ -15,14 +15,14 @@ set background=dark
 " ============================================================================
 
 hi! Boolean                           guifg=#cccccc gui=italic
-hi! Comment                           guifg=#50586a gui=italic
+hi! Comment                           guifg=#60687a gui=italic
 hi! Constant                          guifg=NONE    gui=italic
 hi! Delimiter                         guifg=#cc99cc
 hi! DiffAdd             guibg=#2a332a guifg=#668844
 hi! DiffChange          guibg=#2c2b2a guifg=#7f6030
 hi! DiffDelete          guibg=#4a2a2a guifg=#aa6666
 hi! DiffText            guibg=#4a2a2a
-hi! Error               guibg=#4a2a2a guifg=#ee7777
+hi! Error               guibg=NONE    guifg=#ee6666
 hi! Function                          guifg=NONE
 hi! Identifier                        guifg=#dddddd
 hi! Ignore                            guifg=#40485a
@@ -38,7 +38,7 @@ hi! PreProc                           guifg=#dddddd
 hi! Question                          guifg=#88aabb
 hi! Search              guibg=#dd99ff guifg=bg
 hi! Special                           guifg=#dd7766
-hi! SpecialComment      guifg=#707a8a               gui=NONE
+hi! SpecialComment                    guifg=#707a8a gui=NONE
 hi! SpecialKey                        guifg=#772222
 hi! Statement                         guifg=#777777 gui=NONE
 hi! StorageClass                      guifg=#777777
@@ -49,7 +49,7 @@ hi! Type                              guifg=#dddddd gui=NONE
 hi! Underlined                        guifg=#88aaee gui=underline
 hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
-hi! Whitespace          guibg=#1c1c1c guifg=#333333
+hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
 
 hi! link Character      Normal
 hi! link Conditional    Normal
@@ -65,6 +65,9 @@ hi! link Keyword        Normal
 hi! dkoBgAlt            guibg=#24252a
 hi! dkoBgLight          guibg=#303135
 
+hi! dkoPopup            guibg=#2a2a2f guifg=#ccc0c0
+hi! dkoPopupBlank       guibg=#2a2a2f guifg=#2a2a2f
+
 hi! dkoDecorations                    guifg=#505a6a
 hi! dkoRegex                          guifg=#cc99cc
 hi! dkoReturn                         guifg=#cc8877 gui=italic
@@ -78,7 +81,7 @@ hi! link dkoJavaDocType SpecialComment
 hi! link dkoJavaDocKey  SpecialComment
 
 " Signs
-hi! dkoSignError        guibg=#5a2a2a guifg=#cc4444
+hi! link dkoSignError   Error
 hi! dkoSignWarning                    guifg=#ddaa66
 hi! dkoSignInfo                       guifg=fg
 hi! dkoSignMessage                    guifg=#77aa88
@@ -173,6 +176,26 @@ hi! link gitDate            String
 hi! link gitHash            Normal
 
 " ============================================================================
+" git-messenger
+" ============================================================================
+
+" Header such as 'Commit:', 'Author:'
+hi link gitmessengerHeader        Title
+
+" Commit hash at 'Commit:' header
+hi link gitmessengerHash          dkoPopup
+
+" History number at 'History:' header
+hi link gitmessengerHistory       dkoPopup
+
+" Normal color. This color is the most important
+hi link gitmessengerPopupNormal   dkoPopup
+
+" Color of 'end of buffer'. To hide '~' in popup window, I recommend to use the same background
+" color as gitmessengerPopupNormal.
+hi link gitmessengerEndOfBuffer   dkoPopupBlank
+
+" ============================================================================
 " vim-indentguides
 " ============================================================================
 
@@ -220,6 +243,8 @@ hi! link jsClassProperty      Normal
 " token 'componentWillMount'
 hi! link jsClassFuncName      Normal
 
+hi! link jsArrowFunction      Delimiter
+
 hi! link jsFuncCall           Function
 hi! link jsFuncArgs           Identifier
 
@@ -236,12 +261,25 @@ hi! link jsxAttrib              dkoNormalKey
 hi! link jsxAttributeBraces     Noise
 hi! link jsxEqual               Noise
 
+hi! link jsxOpenPunct           Noise
+hi! link jsxComponentName       Statement
+hi! link jsxTagName             Statement
+hi! link jsxCloseString         Noise
+
 " ============================================================================
 " JSON
 " ============================================================================
 
 hi! link jsonBoolean          Boolean
 hi! link jsonEscape           Operator
+
+" ============================================================================
+" Markdown
+" ============================================================================
+
+hi! link markdownCode               Identifier
+hi! link markdownLinkDelimiter      Noise
+hi! link markdownLinkTextDelimiter  Noise
 
 " ============================================================================
 " PHP
@@ -280,6 +318,20 @@ hi! link rubyStringDelimiter  Noise
 hi! link shCommandSub         Function
 " token: '-f' and '--flag'
 hi! link shOption             Normal
+
+" ============================================================================
+" Typescript - yats.vim
+" ============================================================================
+
+hi! link  typescriptAbstract                Operator
+hi! link  typescriptAccessibilityModifier   StorageClass
+hi! link  typescriptClassKeyword            Normal
+hi! link  typescriptClassName               Label
+hi! link  typescriptExport                  StorageClass
+hi! link  typescriptImport                  StorageClass
+hi! link  typescriptCastKeyword             StorageClass
+hi! link  typescriptTypeReference           Normal
+hi! link  typescriptVariable                StorageClass
 
 " ============================================================================
 " vim-plug
@@ -362,6 +414,15 @@ hi! link zshOptStart          Identifier
 hi! link zshOption            Normal
 
 " ============================================================================
+" coc
+" ============================================================================
+
+hi! link CocErrorSign       dkoSignError
+hi! link CocWarningSign     dkoSignWarning
+hi! link CocInfoSign        dkoSignInfo
+hi! link CocHintSign        dkoSignMessage
+
+" ============================================================================
 " QuickFix
 " ============================================================================
 
@@ -375,10 +436,10 @@ hi! link qfSeparator  dkoDecorations
 " Neomake
 " ============================================================================
 
-hi! NeomakeError                guibg=#5a2a2a
-hi! NeomakeInfo                 guibg=#2a332a
-hi! NeomakeMessage              guibg=#2a332a
-hi! NeomakeWarning              guibg=#2c2b2a
+hi! link NeomakeError           dkoInlineError
+hi! link NeomakeInfo            dkoInlineInfo
+hi! link NeomakeMessage         dkoInlineInfo
+hi! link NeomakeWarning         dkoInlineWarning
 hi! link NeomakeErrorSign       dkoSignError
 hi! link NeomakeWarningSign     dkoSignWarning
 hi! link NeomakeInfoSign        dkoSignInfo
