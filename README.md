@@ -1,6 +1,6 @@
 # vim-colors-meh
 
-> A 24-bit Vim color scheme, with preference for contrast over hues.
+> A 256-color / 24-bit Vim color scheme, with preference for contrast over hues.
 
 It works for me, just publishing it in case someone has similar taste and
 wants to use it.
