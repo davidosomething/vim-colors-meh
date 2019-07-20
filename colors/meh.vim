@@ -461,9 +461,3 @@ hi! link NeomakeMessageSign     dkoSignMessage
 hi link netrwTreeBar  dkoDecorations
 hi link netrwClassify Delimiter
 hi link netrwExe      Normal
-
-" ============================================================================
-" Line
-" ============================================================================
-
-call meh#LineColors()
