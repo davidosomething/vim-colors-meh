@@ -10,6 +10,16 @@ wants to use it.
 A [generated screenshot is available on vimcolors](https://vimcolors.com/989/meh/dark)
 and may be more up to date.
 
+## Installation
+
+Copy the files to the appropriate directories in `~/.vim/`, use vim's native
+pack, or use a plugin manager like
+[vim-plug](https://github.com/junegunn/vim-plug), e.g.
+
+```viml
+Plug 'davidosomething/vim-colors-meh'
+```
+
 ## Some design choices
 
 - The background is not fully black, and Normal text is not fully white to be
