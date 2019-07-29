@@ -75,11 +75,14 @@ hi! Underlined                        guifg=#88aaee gui=underline           cter
 hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
 hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
+hi! Folded              guibg=#24252a guifg=#88aabb           ctermbg=236   ctermfg=110
+hi! TabLineSel          guifg=#cc8877
+hi! link TabLine Folded
+hi! link TabLineFill dkoBgAlt
 
 hi! link Character      Normal
 hi! link Conditional    Normal
 hi! link Directory      Identifier
-hi! link Folded         dkoBgLight
 hi! link Include        Normal
 hi! link Keyword        Normal
 
