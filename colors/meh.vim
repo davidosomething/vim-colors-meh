@@ -24,6 +24,7 @@ hi! dkoDecorations                    guifg=#505a6a
 hi! dkoRegex                          guifg=#cc99cc
 hi! dkoReturn                         guifg=#cc8877 gui=italic
 hi! dkoQuote                          guifg=#77aa88 gui=italic
+hi! dkoType                           guifg=#60687a gui=italic
 hi! dkoWarningText      guibg=#2c2b2a guifg=#ddaa66 gui=bold
 hi! dkoNormalKey                      guifg=#ccccbb
 
@@ -342,6 +343,8 @@ hi! link  typescriptClassName               Label
 hi! link  typescriptExport                  StorageClass
 hi! link  typescriptImport                  StorageClass
 hi! link  typescriptCastKeyword             StorageClass
+hi! link  typescriptPredefinedType          dkoType
+hi! link  typescriptObjectType              dkoType
 hi! link  typescriptTypeReference           Normal
 hi! link  typescriptVariable                StorageClass
 
