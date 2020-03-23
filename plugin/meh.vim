@@ -4,7 +4,7 @@ augroup END
 
 " Override vim-pandoc-syntax highlighting
 autocmd vim-colors-meh Syntax *pandoc*
-      \   if get(g:, 'meh_pandoc_enabled', 1)
+      \   if get(g:, 'meh_pandoc_enabled', 0)
       \|    colorscheme meh
       \|    meh#PandocColors()
       \|  endif
