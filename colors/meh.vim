@@ -226,6 +226,9 @@ hi! link jsRegexpString       dkoRegex
 hi! link jsGlobalObjects      Normal
 hi! link jsGlobalNodeObjects  dkoNormalKey
 hi! link jsFuncArgOperator    Operator
+hi! link jsExport             StorageClass
+hi! link jsImport             jsExport
+hi! link jsFrom               jsExport
 hi! link jsModuleKeyword      String
 hi! link jsNull               Constant
 hi! link jsReturn             dkoReturn
@@ -273,6 +276,7 @@ hi! link jsObjectProp         Normal
 hi! link jsxAttrib              dkoNormalKey
 hi! link jsxAttributeBraces     Noise
 hi! link jsxEqual               Noise
+hi! link jsxBraces              Noise
 
 hi! link jsxOpenPunct           Noise
 hi! link jsxComponentName       Statement
@@ -341,10 +345,12 @@ hi! link  typescriptAccessibilityModifier   StorageClass
 hi! link  typescriptClassKeyword            Normal
 hi! link  typescriptClassName               Label
 hi! link  typescriptExport                  StorageClass
-hi! link  typescriptImport                  StorageClass
+hi! link  typescriptImport                  typescriptExport
 hi! link  typescriptCastKeyword             StorageClass
+hi! link  typescriptParens                  Noise
 hi! link  typescriptPredefinedType          dkoType
 hi! link  typescriptObjectType              dkoType
+hi! link  typescriptTemplateSB              dkoRegex
 hi! link  typescriptTypeReference           Normal
 hi! link  typescriptVariable                StorageClass
 
