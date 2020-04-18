@@ -22,11 +22,11 @@ pack, or use a plugin manager like
 Plug 'davidosomething/vim-colors-meh'
 ```
 
-Disable the pandoc syntax if you don't use it or you don't want to add the
-`plugin/` to your runtime.
+Enable the pandoc syntax if you want special pandoc colors. It requires a full
+plugin install, so ensure the `plugin/` dir is part of your runtime.
 
 ```viml
-let g:meh_pandoc_enabled = 0
+let g:meh_pandoc_enabled = 1
 ```
 
 ## Some design choices
