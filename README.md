@@ -20,6 +20,7 @@ pack, or use a plugin manager like
 
 ```viml
 Plug 'davidosomething/vim-colors-meh'
+colorscheme meh
 ```
 
 Enable the pandoc syntax if you want special pandoc colors. It requires a full
