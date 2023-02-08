@@ -131,8 +131,26 @@ hi! PmenuThumb          guibg=#505055
 hi! link WildMenu       PmenuThumb
 
 " ============================================================================
+" Neovim float
+" ============================================================================
+
+hi! FloatBorder guibg=bg guifg=fg
+
+" ============================================================================
+" Diagnostic
+" ============================================================================
+
+hi! link DiagnosticError  dkoSignError
+hi! link DiagnosticWarn   dkoSignWarning
+hi! link DiagnosticInfo   dkoSignInfo
+hi! link DiagnosticHint   dkoSignMessage
+
+" ============================================================================
 " Plugin provided signs
 " ============================================================================
+
+" ghillb/cybu.nvim
+hi! link CybuFocus  dkoWarningText
 
 " w0rp/ale
 "hi! link ALEErrorSign             dkoSignError
@@ -340,19 +358,20 @@ hi! link shOption             Normal
 " Typescript - yats.vim
 " ============================================================================
 
-hi! link  typescriptAbstract                Operator
-hi! link  typescriptAccessibilityModifier   StorageClass
-hi! link  typescriptClassKeyword            Normal
-hi! link  typescriptClassName               Label
-hi! link  typescriptExport                  StorageClass
-hi! link  typescriptImport                  typescriptExport
-hi! link  typescriptCastKeyword             StorageClass
-hi! link  typescriptParens                  Noise
-hi! link  typescriptPredefinedType          dkoType
-hi! link  typescriptObjectType              dkoType
-hi! link  typescriptTemplateSB              dkoRegex
-hi! link  typescriptTypeReference           Normal
-hi! link  typescriptVariable                StorageClass
+hi! link typescriptAbstract                Operator
+hi! link typescriptAccessibilityModifier   StorageClass
+hi! link typescriptClassKeyword            Normal
+hi! link typescriptClassName               Label
+hi! link typescriptExport                  StorageClass
+hi! link typescriptImport                  typescriptExport
+hi! link typescriptCastKeyword             StorageClass
+hi! link typescriptParens                  Noise
+hi! link typescriptPredefinedType          dkoType
+hi! link typescriptObjectType              dkoType
+hi! link typescriptTemplateSB              dkoRegex
+hi! link typescriptTypeReference           Normal
+hi! link typescriptVariable                StorageClass
+hi! link tsxRegion                         String
 
 " ============================================================================
 " vim-plug
