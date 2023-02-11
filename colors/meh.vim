@@ -147,41 +147,41 @@ hi! link WildMenu       PmenuThumb
 
 hi! FloatBorder guibg=bg guifg=fg
 
-  " ============================================================================
-  " Status and tab line
-  " ============================================================================
+" ============================================================================
+" Status and tab line
+" ============================================================================
 
-  " Statusline uses fg as bg
-  hi! link StatusLineNC   dkoStatusNC
-  hi! link StatusLine     dkoStatus
-  hi! link TabLine        dkoStatus
-  hi! link TabLineFill    dkoStatus
-  hi! link TabLineSel     dkoStatus
+" Statusline uses fg as bg
+hi! link StatusLineNC   dkoStatusNC
+hi! link StatusLine     dkoStatus
+hi! link TabLine        dkoStatus
+hi! link TabLineFill    dkoStatus
+hi! link TabLineSel     dkoStatus
 
-  " ============================================================================
-  " Statusline Symbols
-  " ============================================================================
+" ============================================================================
+" Statusline Symbols
+" ============================================================================
 
-  hi! dkoLineImportant    guibg=#ddaa66 guifg=#303033
-  hi! link dkoLineModeReplace       dkoLineImportant
-  hi! link dkoLineNeomakeRunning    dkoLineImportant
+hi! dkoLineImportant    guibg=#ddaa66 guifg=#303033
+hi! link dkoLineModeReplace       dkoLineImportant
+hi! link dkoLineNeomakeRunning    dkoLineImportant
 
-  " ============================================================================
-  " Neomake
-  " ============================================================================
+" ============================================================================
+" Neomake
+" ============================================================================
 
-  hi! link NeomakeStatusGood      dkoStatusGood
+hi! link NeomakeStatusGood      dkoStatusGood
 
-  " ============================================================================
-  " Sign column
-  " ============================================================================
+" ============================================================================
+" Sign column
+" ============================================================================
 
-  " kshenoy/vim-signature
-  hi! link SignatureMarkText        dkoLineImportant
+" kshenoy/vim-signature
+hi! link SignatureMarkText        dkoLineImportant
 
-  " showmarks
-  hi! link ShowMarksHLl             dkoLineImportant
-  hi! link ShowMarksHLu             dkoLineImportant
+" showmarks
+hi! link ShowMarksHLl             dkoLineImportant
+hi! link ShowMarksHLu             dkoLineImportant
 
 " ============================================================================
 " Diagnostic
@@ -224,6 +224,10 @@ hi! link ChangesSignTextDel       dkoSignRemoved
 hi! MatchParen        guibg=#225588 guifg=#ddddcc           ctermbg=18 ctermfg=fg
 " the <> in <head>
 hi! ParenMatch        guibg=#994433 guifg=#ddddcc gui=NONE
+
+" gbprod/yanky.nvim
+hi! link YankyPut    IncSearch
+hi! link YankyYanked IncSearch
 
 " ============================================================================
 " CSS
