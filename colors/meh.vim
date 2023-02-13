@@ -32,7 +32,7 @@ hi! dkoSignWarning                    guifg=#ddaa66
 hi! dkoSignInfo                       guifg=fg
 hi! dkoSignMessage                    guifg=#77aa88
 
-hi! dkoStatus           guibg=#30313c guifg=#aaaaaa gui=NONE  ctermbg=237
+hi! dkoStatus           guibg=#30313c guifg=#bbbbbb gui=NONE  ctermbg=237
 hi! dkoStatusNC         guibg=#262631 guifg=#666666 gui=NONE  ctermbg=235
 hi! dkoStatusKey        guibg=#40404c
 hi! dkoStatusValue      guibg=#50505c
@@ -47,10 +47,10 @@ hi! dkoStatusInfo       guibg=#242531 guifg=fg
 " Vim base
 " ============================================================================
 
-hi! Normal              guibg=#202022 guifg=#aaaaaa           ctermbg=235   ctermfg=250
+hi! Normal              guibg=#202022 guifg=#bbbbbb           ctermbg=235   ctermfg=250
 
 hi! Boolean                           guifg=#cccccc gui=italic
-hi! Comment                           guifg=#60687a gui=italic              ctermfg=240
+hi! Comment                           guifg=#70788a gui=italic              ctermfg=240
 hi! Constant                          guifg=NONE    gui=italic
 hi! Delimiter                         guifg=#cc99cc                       ctermfg=139
 hi! DiffAdd             guibg=#2a332a guifg=#668844           ctermbg=235 ctermfg=22
