@@ -145,7 +145,8 @@ hi! link WildMenu       PmenuThumb
 " Neovim float
 " ============================================================================
 
-hi! FloatBorder guibg=bg guifg=fg
+hi! FloatBorder guibg=bg guifg=fg gui=bold
+hi! NormalFloat guibg=bg guifg=fg
 
 " ============================================================================
 " Status and tab line
@@ -351,6 +352,12 @@ hi! link jsxOpenPunct           Noise
 hi! link jsxComponentName       Statement
 hi! link jsxTagName             Statement
 hi! link jsxCloseString         Noise
+
+" ============================================================================
+" Lazy.nvim
+" ============================================================================
+
+hi! link LazyDimmed Comment
 
 " ============================================================================
 " JSON
