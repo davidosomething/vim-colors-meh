@@ -63,6 +63,7 @@ hi! link Identifier dkoTextLight
 hi! Ignore                            guifg=#40485a
 hi! IncSearch           guibg=#dd77cc guifg=bg      gui=NONE  ctermbg=219   ctermfg=235
 hi! link Label dkoTextLight
+hi! LspInlayHint                      guifg=#bb8866 gui=italic
 hi! MoreMsg                           guifg=#aa6666
 hi! Noise                             guifg=#888888                         ctermfg=243
 hi! NonText                           guifg=#334455
