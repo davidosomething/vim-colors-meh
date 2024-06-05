@@ -15,7 +15,10 @@ set background=dark
 
 hi! dkoBgAlt            guibg=#24252a               ctermbg=236
 hi! dkoBgLight          guibg=#303135               ctermbg=237
-hi! dkoTextLight        guifg=#dddddd                           ctermfg=253
+hi! dkoTextLight                      guifg=#dddddd ctermfg=253
+hi! dkoTextGood                       guifg=#77aa88
+hi! dkoTextWarn                       guifg=#ddaa66
+hi! dkoTextInfo                       guifg=#505a71
 
 hi! dkoPopup            guibg=#2a2a2f guifg=#ccc0c0
 hi! dkoPopupBlank       guibg=#2a2a2f guifg=#2a2a2f
@@ -25,12 +28,9 @@ hi! dkoRegex                          guifg=#cc99cc
 hi! dkoReturn                         guifg=#cc8877 gui=italic
 hi! dkoQuote                          guifg=#77aa88 gui=italic
 hi! dkoType                           guifg=#60687a gui=italic
-hi! dkoWarningText      guibg=#2c2b2a guifg=#ddaa66 gui=bold
+hi! link dkoWarningText dkoTextWarn
+hi dkoWarningText       guibg=#2c2b2a               gui=bold
 hi! dkoNormalKey                      guifg=#ccccbb
-
-hi! dkoSignWarning                    guifg=#ddaa66
-hi! dkoSignInfo                       guifg=fg
-hi! dkoSignMessage                    guifg=#77aa88
 
 hi! dkoStatus           guibg=#30313c guifg=#bbbbbb gui=NONE  ctermbg=237
 hi! dkoStatusNC         guibg=#262631 guifg=#666666 gui=NONE  ctermbg=235
@@ -38,9 +38,16 @@ hi! dkoStatusKey        guibg=#40404c
 hi! dkoStatusValue      guibg=#50505c
 hi! dkoStatusItem       guibg=#242531
 hi! dkoStatusTransient  guibg=#505a71 guifg=fg
+
+hi! link dkoStatusGood  dkoTextGood
+hi dkoStatusGood        guibg=#242531
+
 hi! dkoStatusGood       guibg=#242531 guifg=#77aa88
 hi! dkoStatusError      guibg=#242531 guifg=#cc4444
-hi! dkoStatusWarning    guibg=#242531 guifg=#ddaa66
+
+hi! link dkoStatusWarning dkoTextWarn
+hi dkoStatusWarning    guibg=#242531
+
 hi! dkoStatusInfo       guibg=#242531 guifg=fg
 
 " ============================================================================
@@ -109,7 +116,6 @@ hi! link dkoJavaDocType SpecialComment
 hi! link dkoJavaDocKey  SpecialComment
 
 " Signs
-hi! link dkoSignError   Error
 hi! link dkoSignAdded   DiffAdd
 hi! link dkoSignRemoved DiffDelete
 
@@ -189,10 +195,15 @@ hi! link ShowMarksHLu             dkoLineImportant
 " Diagnostic
 " ============================================================================
 
-hi! link DiagnosticError  dkoSignError
-hi! link DiagnosticWarn   dkoSignWarning
-hi! link DiagnosticInfo   dkoSignInfo
-hi! link DiagnosticHint   dkoSignMessage
+hi! link DiagnosticOk     dkoTextGood
+hi! link DiagnosticError  Error
+hi! link DiagnosticWarn   dkoTextWarn
+
+hi! DiagnosticHint        guibg=NONE guifg=NONE
+hi! DiagnosticInfo        guibg=NONE guifg=NONE
+
+hi! link DiagnosticSignHint dkoTextInfo
+hi! link DiagnosticSignInfo dkoTextInfo
 
 " ============================================================================
 " Plugin provided signs
@@ -202,7 +213,7 @@ hi! link DiagnosticHint   dkoSignMessage
 hi! link CybuFocus  dkoWarningText
 
 " w0rp/ale
-"hi! link ALEErrorSign             dkoSignError
+"hi! link ALEErrorSign             Error
 " tomtom/quickfixsigns_vim
 hi! link QuickFixSignsDiffAdd     dkoSignAdded
 hi! link QuickFixSignsDiffChange  DiffChange
@@ -516,10 +527,10 @@ hi! link zshOption            Normal
 " coc
 " ============================================================================
 
-hi! link CocErrorSign       dkoSignError
-hi! link CocWarningSign     dkoSignWarning
-hi! link CocInfoSign        dkoSignInfo
-hi! link CocHintSign        dkoSignMessage
+hi! link CocErrorSign       Error
+hi! link CocWarningSign     dkoStatusWarning
+hi! CocInfoSign             dkoTextInfo
+hi! link CocHintSign        dkoTextInfo
 
 " ============================================================================
 " QuickFix
@@ -530,19 +541,6 @@ hi! link QuickFixLine dkoBgLight
 hi! link qfFileName   SpecialComment
 hi! link qfLineNr     Comment
 hi! link qfSeparator  dkoDecorations
-
-" ============================================================================
-" Neomake
-" ============================================================================
-
-hi! link NeomakeError           dkoInlineError
-hi! link NeomakeInfo            dkoInlineInfo
-hi! link NeomakeMessage         dkoInlineInfo
-hi! link NeomakeWarning         dkoInlineWarning
-hi! link NeomakeErrorSign       dkoSignError
-hi! link NeomakeWarningSign     dkoSignWarning
-hi! link NeomakeInfoSign        dkoSignInfo
-hi! link NeomakeMessageSign     dkoSignMessage
 
 " ============================================================================
 " netrw
