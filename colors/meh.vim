@@ -44,10 +44,6 @@ hi dkoStatusGood        guibg=#242531
 
 hi! dkoStatusGood       guibg=#242531 guifg=#77aa88
 hi! dkoStatusError      guibg=#242531 guifg=#cc4444
-
-hi! link dkoStatusWarning dkoTextWarn
-hi dkoStatusWarning    guibg=#242531
-
 hi! dkoStatusInfo       guibg=#242531 guifg=fg
 
 " ============================================================================
@@ -528,8 +524,8 @@ hi! link zshOption            Normal
 " ============================================================================
 
 hi! link CocErrorSign       Error
-hi! link CocWarningSign     dkoStatusWarning
-hi! CocInfoSign             dkoTextInfo
+hi! link CocWarningSign     dkoTextWarn
+hi! link CocInfoSign        dkoTextInfo
 hi! link CocHintSign        dkoTextInfo
 
 " ============================================================================
