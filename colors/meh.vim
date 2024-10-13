@@ -148,7 +148,7 @@ hi! link WildMenu       PmenuThumb
 " Neovim float
 " ============================================================================
 
-hi! FloatBorder guibg=bg guifg=#505055 gui=bold
+hi! FloatBorder guibg=bg guifg=#666666
 hi! NormalFloat guibg=bg guifg=fg
 
 " ============================================================================
@@ -545,3 +545,8 @@ hi! link qfSeparator  dkoDecorations
 hi link netrwTreeBar  dkoDecorations
 hi link netrwClassify Delimiter
 hi link netrwExe      Normal
+
+" ============================================================================
+" telescope
+" ============================================================================
+hi! link TelescopeBorder FloatBorder
