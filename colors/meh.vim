@@ -148,7 +148,7 @@ hi! link WildMenu       PmenuThumb
 " Neovim float
 " ============================================================================
 
-hi! FloatBorder guibg=bg guifg=fg gui=bold
+hi! FloatBorder guibg=bg guifg=#505055 gui=bold
 hi! NormalFloat guibg=bg guifg=fg
 
 " ============================================================================
