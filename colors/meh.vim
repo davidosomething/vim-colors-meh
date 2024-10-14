@@ -136,7 +136,10 @@ hi! link CursorLine     dkoBgAlt
 " Popup menu
 " ============================================================================
 
-hi! link Pmenu          dkoBgLight
+" want guifg=#666666 for borders, but not on text
+" waiting for https://github.com/neovim/neovim/issues/15551
+hi! Pmenu               guibg=bg
+
 hi! PmenuSel            guibg=#404044
 " popup menu scrollbar
 hi! link PmenuSbar      PmenuSel
