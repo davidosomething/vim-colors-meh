@@ -195,14 +195,19 @@ hi! link ShowMarksHLu             dkoLineImportant
 " ============================================================================
 
 hi! link DiagnosticOk     dkoTextGood
-hi! link DiagnosticError  Error
 hi! link DiagnosticWarn   dkoTextWarn
+
+" Don't make whole line of error red
+" We have underline
+hi! DiagnosticError                  guifg=NONE
+hi! DiagnosticUnderlineError         guifg=#ee6666 gui=underline ctermbg=NONE ctermfg=160
+hi! DiagnosticSignError              guifg=#ee6666
 
 hi! DiagnosticHint        guibg=NONE guifg=NONE
 hi! DiagnosticInfo        guibg=NONE guifg=NONE
 
-hi! link DiagnosticSignHint dkoTextInfo
-hi! link DiagnosticSignInfo dkoTextInfo
+hi! link DiagnosticSignHint     dkoTextInfo
+hi! link DiagnosticSignInfo     dkoTextInfo
 
 " ============================================================================
 " Plugin provided signs
