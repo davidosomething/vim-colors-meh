@@ -529,6 +529,16 @@ hi! link zshOptStart          Identifier
 hi! link zshOption            Normal
 
 " ============================================================================
+" nvim-cmp
+" ============================================================================
+
+" Highlight the partial match in bold
+hi CmpItemAbbrMatch             guifg=white     gui=bold
+hi! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
+" End part of completion info a little darker
+hi CmpItemMenu                  guifg=#70788a
+
+" ============================================================================
 " coc
 " ============================================================================
 
