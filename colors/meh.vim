@@ -91,7 +91,7 @@ hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
 hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
 hi! Folded              guibg=#24252a guifg=#88aabb           ctermbg=236   ctermfg=110
-hi! TabLineSel          guifg=#cc8877
+hi! TabLineSel                        guifg=#cc8877 gui=bold
 hi! link TabLine Folded
 hi! link TabLineFill dkoBgAlt
 
@@ -164,7 +164,6 @@ hi! link StatusLineNC   dkoStatusNC
 hi! link StatusLine     dkoStatus
 hi! link TabLine        dkoStatus
 hi! link TabLineFill    dkoStatus
-hi! link TabLineSel     dkoStatus
 
 " ============================================================================
 " Statusline Symbols
@@ -532,9 +531,9 @@ hi! link zshOption            Normal
 " nvim-cmp
 " ============================================================================
 
-" Highlight the partial match in bold
-hi CmpItemAbbrMatch             guifg=white     gui=bold
-hi! link CmpItemAbbrMatchFuzzy CmpItemAbbrMatch
+"hi CmpItemAbbr
+hi! link CmpItemAbbrMatch       TabLineSel
+hi! link CmpItemAbbrMatchFuzzy  CmpItemAbbrMatch
 " End part of completion info a little darker
 hi CmpItemMenu                  guifg=#70788a
 
