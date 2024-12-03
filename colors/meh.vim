@@ -140,8 +140,7 @@ hi! link CursorLine     dkoBgAlt
 " want guifg=#666666 for borders, but not on text
 " waiting for https://github.com/neovim/neovim/issues/15551
 hi! Pmenu               guibg=bg
-
-hi! PmenuSel            guibg=#404044
+hi! PmenuSel            guifg=fg guibg=#404044
 " popup menu scrollbar
 hi! link PmenuSbar      PmenuSel
 hi! PmenuThumb          guibg=#505055
