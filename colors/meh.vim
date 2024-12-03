@@ -567,4 +567,6 @@ hi link netrwExe      Normal
 " ============================================================================
 " telescope
 " ============================================================================
+
 hi! link TelescopeBorder FloatBorder
+hi! link TelescopeSelection PmenuSel
