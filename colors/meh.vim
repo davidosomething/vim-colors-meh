@@ -53,19 +53,25 @@ hi! dkoStatusInfo       guibg=#242531 guifg=fg
 hi! Normal              guibg=#202022 guifg=#bbbbbb           ctermbg=235   ctermfg=250
 
 hi! Boolean                           guifg=#cccccc gui=italic
+hi! link Character      Normal
 hi! Comment                           guifg=#70788a gui=italic              ctermfg=240
+hi! link Conditional    Normal
 hi! Constant                          guifg=NONE    gui=italic
 hi! Delimiter                         guifg=#cc99cc                       ctermfg=139
 hi! DiffAdd             guibg=#2a332a guifg=#668844           ctermbg=235 ctermfg=22
 hi! DiffChange          guibg=#2c2b2a guifg=#7f6030           ctermbg=235 ctermfg=94
 hi! DiffDelete          guibg=#4a2a2a guifg=#aa6666           ctermbg=235 ctermfg=52
 hi! DiffText            guibg=#4a2a2a
+hi! link Directory      dkoTextLight
 hi! Error               guibg=NONE    guifg=#ee6666           ctermbg=NONE ctermfg=160
 hi! Function                          guifg=NONE
-hi! link Identifier dkoTextLight
+hi! link Identifier     dkoTextLight
 hi! Ignore                            guifg=#40485a
+hi! link Include        Normal
 hi! IncSearch           guibg=#dd77cc guifg=bg      gui=NONE  ctermbg=219   ctermfg=235
-hi! link Label dkoTextLight
+hi! link Keyword        Normal
+hi! link Label          dkoTextLight
+hi! LspInlayHint                      guifg=#40485a gui=italic
 hi! MoreMsg                           guifg=#aa6666
 hi! Noise                             guifg=#888888                         ctermfg=243
 hi! NonText                           guifg=#334455
@@ -90,18 +96,11 @@ hi! Underlined                        guifg=#88aaee gui=underline           cter
 hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
 hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
+hi! link WinSeparator   Question
 hi! Folded              guibg=#24252a guifg=#88aabb           ctermbg=236   ctermfg=110
 hi! TabLineSel                        guifg=#cc8877 gui=bold
 hi! link TabLine Folded
 hi! link TabLineFill dkoBgAlt
-
-hi! link Character      Normal
-hi! link Conditional    Normal
-hi! link Directory      Identifier
-hi! link Include        Normal
-hi! link Keyword        Normal
-
-hi! LspInlayHint                      guifg=#40485a gui=italic
 
 " ============================================================================
 " My colors
