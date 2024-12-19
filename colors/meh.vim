@@ -96,7 +96,6 @@ hi! Underlined                        guifg=#88aaee gui=underline           cter
 hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
 hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
-hi! link WinSeparator   Question
 hi! Folded              guibg=#24252a guifg=#88aabb           ctermbg=236   ctermfg=110
 hi! TabLineSel                        guifg=#cc8877 gui=bold
 hi! link TabLine Folded
@@ -119,9 +118,13 @@ hi! link dkoSignRemoved DiffDelete
 " Line backgrounds
 " ============================================================================
 
-" fg is thin line
-hi! VertSplit           guibg=#262631 guifg=#262631 ctermbg=237 ctermfg=237
-hi! LineNr              guibg=#222226 guifg=#404044 ctermbg=235 ctermfg=238
+" use bg only for a thick line, fg only for a thin line
+" same fg as Question
+hi! VertSplit           guibg=#262631 guifg=#40485a ctermbg=237 ctermfg=237
+" As of neovim 0.10 this replaces VertSplit
+hi! link WinSeparator   VertSplit
+
+hi! LineNr              guibg=#222226 guifg=#40485a ctermbg=235 ctermfg=238
 hi! CursorLineNr        guibg=#303033 guifg=#a0a0aa ctermbg=238 ctermfg=245
 hi! link FoldColumn     LineNr
 hi! link SignColumn     LineNr
@@ -139,7 +142,7 @@ hi! link CursorLine     dkoBgAlt
 " want guifg=#666666 for borders, but not on text
 " waiting for https://github.com/neovim/neovim/issues/15551
 hi! Pmenu               guibg=bg
-hi! PmenuSel            guifg=fg guibg=#404044
+hi! PmenuSel            guifg=fg guibg=#40485a
 " popup menu scrollbar
 hi! link PmenuSbar      PmenuSel
 hi! PmenuThumb          guibg=#505055
