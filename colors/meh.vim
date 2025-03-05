@@ -573,6 +573,56 @@ hi link netrwExe      Normal
 " same as search bg
 hi! SnacksIndentScope guifg=#dd99ff
 
+" SnacksNotifierTitle[level] is the actual color used for icon in the
+" notification popup, counterintuitively to SnacksNotifierIcon[level]
+
+" SnacksNotifierMinimal xxx links to NormalFloat
+
+" SnacksNotifierDebug xxx links to Normal
+" SnacksNotifierBorderDebug xxx links to NonText
+" SnacksNotifierFooterDebug xxx links to NonText
+" SnacksNotifierIconDebug xxx links to NonText
+" SnacksNotifierTitleDebug xxx links to NonText
+hi! link SnacksNotifierBorderDebug FloatBorder
+
+" SnacksNotifierError xxx links to Normal
+" SnacksNotifierBorderError xxx links to DiagnosticError
+" SnacksNotifierFooterError xxx links to DiagnosticError
+" SnacksNotifierIconError xxx links to DiagnosticSignError
+" SnacksNotifierTitleError xxx links to DiagnosticError
+hi! link SnacksNotifierBorderError FloatBorder
+hi! link SnacksNotifierIconError Error
+hi! link SnacksNotifierTitleError Error
+
+" SnacksNotifierHistory xxx links to Normal
+" SnacksNotifierHistoryTitle xxx links to Title
+" SnacksNotifierHistoryDateTime xxx links to Special
+
+" SnacksNotifierTrace xxx links to Normal
+" SnacksNotifierBorderTrace xxx links to NonText
+" SnacksNotifierFooterTrace xxx links to NonText
+" SnacksNotifierIconTrace xxx links to NonText
+" SnacksNotifierTitleTrace xxx links to NonText
+hi! link SnacksNotifierBorderTrace FloatBorder
+"
+" SnacksNotifierInfo xxx links to Normal
+" SnacksNotifierBorderInfo xxx links to DiagnosticInfo
+" SnacksNotifierFooterInfo xxx links to DiagnosticInfo
+" SnacksNotifierIconInfo xxx links to DiagnosticSignInfo
+" SnacksNotifierTitleInfo xxx links to DiagnosticInfo
+hi! link SnacksNotifierBorderInfo FloatBorder
+hi! link SnacksNotifierIconInfo dkoTextInfo
+hi! link SnacksNotifierTitleInfo dkoTextInfo
+
+" SnacksNotifierWarn xxx links to Normal
+" SnacksNotifierBorderWarn xxx links to DiagnosticWarn
+" SnacksNotifierFooterWarn xxx links to DiagnosticWarn
+" SnacksNotifierIconWarn xxx links to DiagnosticSignWarn
+" SnacksNotifierTitleWarn xxx links to DiagnosticWarn
+hi! link SnacksNotifierBorderWarn FloatBorder
+hi! link SnacksNotifierIconWarn dkoTextWarn
+hi! link SnacksNotifierTitleWarn dkoTextWarn
+
 " ============================================================================
 " telescope
 " ============================================================================
