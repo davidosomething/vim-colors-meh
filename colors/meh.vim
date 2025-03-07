@@ -544,6 +544,7 @@ hi! link CocWarningSign     dkoTextWarn
 hi! link CocInfoSign        dkoTextInfo
 hi! link CocHintSign        dkoTextInfo
 hi! link CocInlayHint       LspInlayHint
+hi! link CocMenuSel         PmenuSel
 
 " ============================================================================
 " QuickFix
