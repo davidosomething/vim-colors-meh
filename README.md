@@ -5,9 +5,6 @@
 It works for me, just publishing it in case someone has similar taste and
 wants to use it.
 
-[A generated screenshot on vimcolors](https://vimcolors.com/989/meh/dark) may
-be more up to date.
-
 ![January 2020](https://raw.githubusercontent.com/davidosomething/dotfiles/d759d42f59b4f2be66aa6957bfd595e90096e223/meta/vim-potatonuc.png)
 
 ![older screenshot](https://user-images.githubusercontent.com/609213/39612203-511a6b2e-4f2b-11e8-901e-ab5663477b80.png)
