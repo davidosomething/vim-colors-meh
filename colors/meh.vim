@@ -96,7 +96,6 @@ hi! Underlined                        guifg=#88aaee gui=underline           cter
 hi! Visual              guibg=#afa08f guifg=#1f1f1f
 hi! WarningMsg                        guifg=#ccaa88
 hi! Whitespace          guibg=#1c1c1c guifg=#40485a gui=bold
-hi! link WinSeparator   Question
 hi! Folded              guibg=#24252a guifg=#88aabb           ctermbg=236   ctermfg=110
 hi! TabLineSel                        guifg=#cc8877 gui=bold
 hi! link TabLine Folded
@@ -119,9 +118,13 @@ hi! link dkoSignRemoved DiffDelete
 " Line backgrounds
 " ============================================================================
 
-" fg is thin line
-hi! VertSplit           guibg=#262631 guifg=#262631 ctermbg=237 ctermfg=237
-hi! LineNr              guibg=#222226 guifg=#404044 ctermbg=235 ctermfg=238
+" use bg only for a thick line, fg only for a thin line
+" same fg as Question
+hi! VertSplit           guibg=#262631 guifg=#40485a ctermbg=237 ctermfg=237
+" As of neovim 0.10 this replaces VertSplit
+hi! link WinSeparator   VertSplit
+
+hi! LineNr              guibg=#222226 guifg=#40485a ctermbg=235 ctermfg=238
 hi! CursorLineNr        guibg=#303033 guifg=#a0a0aa ctermbg=238 ctermfg=245
 hi! link FoldColumn     LineNr
 hi! link SignColumn     LineNr
@@ -139,7 +142,7 @@ hi! link CursorLine     dkoBgAlt
 " want guifg=#666666 for borders, but not on text
 " waiting for https://github.com/neovim/neovim/issues/15551
 hi! Pmenu               guibg=bg
-hi! PmenuSel            guifg=fg guibg=#404044
+hi! PmenuSel            guifg=fg guibg=#40485a
 " popup menu scrollbar
 hi! link PmenuSbar      PmenuSel
 hi! PmenuThumb          guibg=#505055
@@ -572,6 +575,56 @@ hi link netrwExe      Normal
 hi! SnacksIndentScope guifg=#dd99ff
 
 hi! link SnacksPickerDir  SpecialComment
+
+" SnacksNotifierTitle[level] is the actual color used for icon in the
+" notification popup, counterintuitively to SnacksNotifierIcon[level]
+
+" SnacksNotifierMinimal xxx links to NormalFloat
+
+" SnacksNotifierDebug xxx links to Normal
+" SnacksNotifierBorderDebug xxx links to NonText
+" SnacksNotifierFooterDebug xxx links to NonText
+" SnacksNotifierIconDebug xxx links to NonText
+" SnacksNotifierTitleDebug xxx links to NonText
+hi! link SnacksNotifierBorderDebug FloatBorder
+
+" SnacksNotifierError xxx links to Normal
+" SnacksNotifierBorderError xxx links to DiagnosticError
+" SnacksNotifierFooterError xxx links to DiagnosticError
+" SnacksNotifierIconError xxx links to DiagnosticSignError
+" SnacksNotifierTitleError xxx links to DiagnosticError
+hi! link SnacksNotifierBorderError FloatBorder
+hi! link SnacksNotifierIconError Error
+hi! link SnacksNotifierTitleError Error
+
+" SnacksNotifierHistory xxx links to Normal
+" SnacksNotifierHistoryTitle xxx links to Title
+" SnacksNotifierHistoryDateTime xxx links to Special
+
+" SnacksNotifierTrace xxx links to Normal
+" SnacksNotifierBorderTrace xxx links to NonText
+" SnacksNotifierFooterTrace xxx links to NonText
+" SnacksNotifierIconTrace xxx links to NonText
+" SnacksNotifierTitleTrace xxx links to NonText
+hi! link SnacksNotifierBorderTrace FloatBorder
+"
+" SnacksNotifierInfo xxx links to Normal
+" SnacksNotifierBorderInfo xxx links to DiagnosticInfo
+" SnacksNotifierFooterInfo xxx links to DiagnosticInfo
+" SnacksNotifierIconInfo xxx links to DiagnosticSignInfo
+" SnacksNotifierTitleInfo xxx links to DiagnosticInfo
+hi! link SnacksNotifierBorderInfo FloatBorder
+hi! link SnacksNotifierIconInfo dkoTextInfo
+hi! link SnacksNotifierTitleInfo dkoTextInfo
+
+" SnacksNotifierWarn xxx links to Normal
+" SnacksNotifierBorderWarn xxx links to DiagnosticWarn
+" SnacksNotifierFooterWarn xxx links to DiagnosticWarn
+" SnacksNotifierIconWarn xxx links to DiagnosticSignWarn
+" SnacksNotifierTitleWarn xxx links to DiagnosticWarn
+hi! link SnacksNotifierBorderWarn FloatBorder
+hi! link SnacksNotifierIconWarn dkoTextWarn
+hi! link SnacksNotifierTitleWarn dkoTextWarn
 
 " ============================================================================
 " telescope
