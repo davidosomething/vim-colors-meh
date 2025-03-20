@@ -571,6 +571,8 @@ hi link netrwExe      Normal
 " same as search bg
 hi! SnacksIndentScope guifg=#dd99ff
 
+hi! link SnacksPickerDir  SpecialComment
+
 " ============================================================================
 " telescope
 " ============================================================================
