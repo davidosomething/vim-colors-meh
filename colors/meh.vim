@@ -574,6 +574,8 @@ hi link netrwExe      Normal
 " same as search bg
 hi! SnacksIndentScope guifg=#dd99ff
 
+hi! link SnacksPickerDir  SpecialComment
+
 " SnacksNotifierTitle[level] is the actual color used for icon in the
 " notification popup, counterintuitively to SnacksNotifierIcon[level]
 
